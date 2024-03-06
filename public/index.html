@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Google fonts -->    
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Global Bank Internal</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $('.search-label-title').click(function () {
+        $(this).parents('.search-content-col').find('.search-item-toggle').toggle();
+        $(this).parents('.search-content-col').find('.search-title-icon').toggleClass('search-title-icon-closed');
+      });
+    </script>
+  </body>
+</html>
