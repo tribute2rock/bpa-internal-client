@@ -10,8 +10,12 @@ pipeline {
             steps {
                 // Install dependencies
                 bat 'npm i --legacy-peer-deps'
+                
+                // Build the project
                 bat 'npm run build'
-                bat 'xcopy /h /i /c /k /e /r /y E:\JenkinsHome\workspace\bpa-internal-client\build E:\JenkinsHome\workspace\bpa-internal-api\public'
+                
+                // Copy build output to another directory
+                bat 'xcopy /s /e /y E:\\JenkinsHome\\workspace\\bpa-internal-client\\build E:\\JenkinsHome\\workspace\\bpa-internal-api\\public'
             }
         }
     }
